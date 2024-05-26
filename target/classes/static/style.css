@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+header{
+	display: flex;
+	justify-content: center;
+}
+
+.Logo, .Top_menu{
+	display: inline-block;	
+}
+
+.Top_menu li{
+	margin-right: 30px;
+	display: inline-block;
+}
+
+.Title{
+	margin-right: 30px;
+	font-family: Cursive;
+	font-size: 45px;
+	color: green;
+}
+
+.Top_menu{
+	font-size: 25px;
+	font-family: Cursive;
+}
+
+.Top_menu a:hover{
+	color: yellow;
+}

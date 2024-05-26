@@ -2,9 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-	<link rel='stylesheet' href="/style.css">
-	<title>Home</title>
+	<link rel="stylesheet" href="/style.css">
+	<title>Profile</title>
 </head>
+<style>
+	.main_text{
+		color: gray;
+	}
+</style>
 <body>
 
 	<header>
@@ -16,10 +21,15 @@
 				<ul>
 					<li><a th:href="@{/}">Home</a></li>
 					<li><a th:href="@{/faq}">FAQ</a></li>
+					<li><a th:href="@{/profile}">My profile</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
-
+	
+	<div class="main_text">
+		Here you need make present profiles
+	</div>
+	
 </body>
 </html>

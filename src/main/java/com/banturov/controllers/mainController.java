@@ -15,5 +15,10 @@ public class mainController {
 	public String faqPage() {
 		return "faq";
 	}
+	
+	@GetMapping("/profile")
+	public String profilePage() {
+		return "profile";
+	}
 
 }

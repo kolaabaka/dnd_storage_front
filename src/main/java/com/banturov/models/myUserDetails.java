@@ -18,21 +18,19 @@ public class myUserDetails implements UserDetails{
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.stream(user.getRoles().split(", "))
+		return Arrays.stream(user.getRole().split(", "))
 				.map(SimpleGrantedAuthority::new)
 				.collect(Collectors.toList());
 	}
 
 	@Override
 	public String getPassword() {
-		// TODO Auto-generated method stub
 		return user.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
-		return user.getUsername();
+		return user.getName();
 	}
 
 

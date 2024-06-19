@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Create heroe</title>
+</head>
+<body>
+	<form th:action="@{/create}" th:object="${myHeroes}" method="post">
+		<input type="text" th:field="*{name}" placeholder="Enter your heroe name"/>
+		<br>
+		<p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Invalid Name</p>
+		<br>
+		<input type="submit" value="Create heroe"/>
+	</form>
+</body>
+</html>

@@ -22,6 +22,7 @@
 					<li><a th:href="@{/}">Home</a></li>
 					<li><a th:href="@{/faq}">FAQ</a></li>
 					<li><a th:href="@{/profile}">My profile</a></li>
+					<li><a th:href="@{/logout}">Log OUT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -30,5 +31,16 @@
 	<div class="main_text">
 		Here you need make security things, read book(!!!)
 	</div>
+	
+	<div th:each="myHeroes : ${heroes}" >
+		<span th:text="${myHeroes.getName()}">data</span>
+		<span th:text="${myHeroes.getAuthorId()}">data</span>
+	</div>
+	
+	<div>
+		<a th:href="@{/create}">Create new heroe</a>
+	</div>
+	
+>
 </body>
 </html>

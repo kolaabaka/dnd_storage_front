@@ -8,19 +8,21 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class myUserDetails implements UserDetails{
+public class MyUserDetails implements UserDetails {
 
-	private myUser user;
-	
-	public myUserDetails(myUser user){
+	private MyUser user;
+
+	public MyUserDetails(MyUser user) {
 		this.user = user;
 	}
-	
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.stream(user.getRole().split(", "))
-				.map(SimpleGrantedAuthority::new)
-				.collect(Collectors.toList());
+		return Arrays.stream(user.getRole().split(", ")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+	}
+
+	public Long getId() {
+		return user.getId();
 	}
 
 	@Override
@@ -32,7 +34,5 @@ public class myUserDetails implements UserDetails{
 	public String getUsername() {
 		return user.getName();
 	}
-
-
 
 }
